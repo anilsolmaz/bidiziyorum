@@ -5,7 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
+
+
 export class Tab1Page {
+
+  items: any[] = [];
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
   constructor() {}
 

@@ -9,23 +9,28 @@ import { GetService } from '../Service/get.service';
   styleUrls: ['./login.page.scss'],
 })
 
+
 export class LoginPage implements OnInit {
 
    username: string;
    password: any;
    gelenData: any[];
-  constructor(private navCtrl: NavController, private getService: GetService) { }
+   loginObject: any[];
+  constructor(private getService: GetService, private navCtrl: NavController) { }
+
 
   ngOnInit() {
   }
 
   doLogin(){
+
     console.log(this.username);
     console.log(this.password);
-    this.getService.getData().subscribe(data => {
-      console.log(data);
+    this.getService.postData(this.username, this.password).subscribe(data => {
+    if(data.login_status === true){
+      this.navCtrl.navigateForward('/tabs/tab1');
+    }
     });
-
 
   }
 
