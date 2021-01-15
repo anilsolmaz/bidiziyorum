@@ -27,9 +27,9 @@ export class LoginPage implements OnInit {
     console.log(this.username);
     console.log(this.password);
     this.getService.postData(this.username, this.password).subscribe(data => {
-    if(data.login_status === true){
-      this.navCtrl.navigateForward('/tabs/tab1');
-    }
+    // if(data.login_status === true){
+    //   this.navCtrl.navigateForward('/tabs/tab1');
+    // }
     });
 
   }

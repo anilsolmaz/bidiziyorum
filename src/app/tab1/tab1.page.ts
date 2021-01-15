@@ -13,7 +13,8 @@ export class Tab1Page {
 
   slideOpts = {
     initialSlide: 1,
-    speed: 400
+    speed: 400,
+    slidesPerView: 1.5,
   };
 
   constructor() {}
